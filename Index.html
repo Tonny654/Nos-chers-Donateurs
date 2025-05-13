@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Nos chers Donateurs !</title>
+  <meta charset="UTF-8" />
+  <title>Liste des Donateurs</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div id="nav-latteral" class="nav-latteral">
-        <div id="nav-close" class="nav-button">
-            <ion-icon name="close"></ion-icon>
+  <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+  <div class="container">
+    <aside class="sidebar">
+      <img src="./assets/logo/logo_Donateurs.png" alt="Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><button onclick="filterDonors('all')">Tous</button></li>
+          <li><button onclick="filterDonors('male')">Hommes</button></li>
+          <li><button onclick="filterDonors('female')">Femmes</button></li>
+        </ul>
+        <div class="sort-options">
+          <button onclick="sortByAmount('asc')">Montant ↑</button>
+          <button onclick="sortByAmount('desc')">Montant ↓</button>
+          <button onclick="sortByName()">Ordre Alphabétique</button>
         </div>
-        <div class="nav-links">
-            <div class="nav-links">
-                <ion-icon name="home"></ion-icon>
-                Accueil
-            </div>
-            <div class="nav-links">
-                <ion-icon name="person"></ion-icon>
-                Compte
-            </div>
-            <div class="nav-links">
-                <ion-icon name="settings"></ion-icon>
-                Paramètres
-            </div>
-            
-        </div>
-    </div>
-    <div id="nav-wrapper"></div>
-    <nav>
-        <div id="nav-open" class="nav-button">
-            <ion-icon name="reorder-three"></ion-icon>
-        </div>
-    </nav>
-    <main>
-        <h1>Listes des Donateurs</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam error, totam quisquam, distinctio placeat cupiditate et temporibus sit adipisci, dolorum possimus beatae tempora dolores repellat non fuga. Officia dicta molestiae eum blanditiis, eveniet magnam magni ullam maiores excepturi consequuntur atque provident inventore perferendis sed officiis nulla fugiat consectetur recusandae eligendi nam impedit maxime laborum earum. Quia ipsa tenetur vero saepe, iure fuga molestias quas cupiditate quibusdam eaque, blanditiis quidem labore eum, tempore adipisci natus assumenda perferendis ratione quos debitis cumque. Maiores exercitationem cumque facilis maxime nisi, vero beatae repellat nemo necessitatibus sed eligendi natus aliquam quaerat sit iure dolorem ipsam!</p>
+      </nav>
+      <div class="amount">Total : <span id="totalAmount">0 €</span></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="header">
+        <h1>Liste des donateurs</h1>
+      </header>
+
+      <section class="cards" id="donorCards"></section>
+
+      <footer class="footer">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </footer>
     </main>
+  </div>
 
-
-    <script src="./app.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
